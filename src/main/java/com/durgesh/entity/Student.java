@@ -1,9 +1,7 @@
 package com.durgesh.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+
 // entity will create a table in a database and map it to corresponding table with the data
 @Entity
 @Table(name="student_data")
@@ -11,6 +9,7 @@ public class Student {
 
     @Id
     @Column(name="student_id")
+    @GeneratedValue(strategy = GenerationType.AUTO)
     public Long id;
 
     @Column(name="first_name")
